@@ -15,19 +15,15 @@ function maxChar(str) {
     }
   }
   var res = 0;
+  var maxChar = 0;
   for (let i in obj) {
     if (obj[i] > res) {
       res = obj[i];
+      maxChar = i;
     }
   }
-  function findValue(obje, val) {
-    for (key in obje) {
-      if (obje[key] === val) {
-        return key;
-      }
-    }
-  }
-  return findValue(obj, res);
+
+  return maxChar;
 }
 
 module.exports = maxChar;
